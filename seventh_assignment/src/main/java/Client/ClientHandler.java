@@ -92,7 +92,7 @@ public class ClientHandler implements Runnable {
                 bis = new BufferedInputStream(fis);
                 bis.read(myByteArray, 0, myByteArray.length);
 
-                FileWriter downloadedFile = new FileWriter("D:\\SBU Projects\\Term 2\\AP\\AP-Seventh-Assignment-Socket-Programming\\seventh_assignment\\downloads\\" + myFile.getName(), true);
+                FileWriter downloadedFile = new FileWriter("downloads\\" + myFile.getName(), true);
                 PrintWriter printWriter = new PrintWriter(downloadedFile, false);
                 printWriter.write(new String(myByteArray, StandardCharsets.UTF_8));
 
