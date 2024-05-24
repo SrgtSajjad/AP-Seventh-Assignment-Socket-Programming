@@ -11,6 +11,7 @@ public class ClientHandler implements Runnable {
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
     private String clientUsername;
+    private boolean isOnline;
 
     public ClientHandler(Socket socket) {
         try {
@@ -19,8 +20,8 @@ public class ClientHandler implements Runnable {
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.clientUsername = bufferedReader.readLine();
             clientHandlers.add(this);
-            broadcastMessage("[SERVER] " + clientUsername + " has entered the chat.");
-            showChatHistory(chatHistory.size());
+            isOnline = false;
+            broadcastMessage("[SERVER] " + clientUsername + " has entered the server.");
         } catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }
@@ -29,21 +30,75 @@ public class ClientHandler implements Runnable {
 
     @Override
     public void run() {
+        String request;
+        while (!socket.isClosed()) {
+            try {
+                bufferedWriter.write("--Menu--\n~Chat\n~Download\n~Exit");
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+                request = bufferedReader.readLine();
+                switch (request.toLowerCase()) {
+                    case "chat":
+                        chat();
+                        break;
+                    case "download":
+                        downloadFiles();
+                        break;
+                    case "exit":
+                        closeEverything(socket, bufferedReader, bufferedWriter);
+                        // ToDo debug
+                        break;
+                    default:
+                        bufferedWriter.write("[SERVER] Invalid input: please choose from the menu");
+                        bufferedWriter.newLine();
+                        bufferedWriter.flush();
+                }
+            } catch (IOException e) {
+                closeEverything(socket, bufferedReader, bufferedWriter);
+                break;
+            }
+
+        }
+    }
+
+    private void downloadFiles() {
+    }
+
+
+    public void chat() {
+
+        try {
+            isOnline = true;
+            bufferedWriter.write("[SERVER] You have entered the group chat.");
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         String messageFromClient;
+        showChatHistory(chatHistory.size());
         while (socket.isConnected()) {
             try {
                 messageFromClient = bufferedReader.readLine();
-                broadcastMessage( clientUsername + ": " + messageFromClient);
+                if (messageFromClient.equalsIgnoreCase("exit")) {
+                    isOnline = false;
+                    bufferedWriter.write("[SERVER] You have left the group chat.");
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                    break;
+                }
+                broadcastMessage(clientUsername + ": " + messageFromClient);
             } catch (IOException e) {
                 closeEverything(socket, bufferedReader, bufferedWriter);
                 break;
             }
         }
-
-
     }
+
+
     private void showChatHistory(int size) {
-        for (String msg: chatHistory) {
+        for (String msg : chatHistory) {
             if (chatHistory.indexOf(msg) < chatHistory.size() - size) {
                 continue;
             }
@@ -59,9 +114,9 @@ public class ClientHandler implements Runnable {
 
     public void broadcastMessage(String messageToSend) {
         chatHistory.add(messageToSend);
-        for (ClientHandler clientHandler:clientHandlers) {
+        for (ClientHandler clientHandler : clientHandlers) {
             try {
-                if (!clientHandler.clientUsername.equals(clientUsername)) {
+                if (!clientHandler.clientUsername.equals(clientUsername) && clientHandler.isOnline) {
                     clientHandler.bufferedWriter.write(messageToSend);
                     clientHandler.bufferedWriter.newLine();
                     clientHandler.bufferedWriter.flush();
