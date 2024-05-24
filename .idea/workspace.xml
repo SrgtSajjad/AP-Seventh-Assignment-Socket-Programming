@@ -5,31 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="082ab970-72d0-4333-83a4-b5a6b440a3a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AP-Seventh-Assignment-Socket-Programming.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Client/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seventh_assignment/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seventh_assignment/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/a-man-without-love-ngelbert-Hmperdinck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/a-man-without-love-ngelbert-Hmperdinck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/all-of-me-john-legend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/all-of-me-john-legend.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/birds-imagine-dragons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/birds-imagine-dragons.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/blinding-lights-the-weekend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/blinding-lights-the-weekend.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/dont-matter-to-me-drake.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/dont-matter-to-me-drake.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/feeling-in-my-body-elvis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/feeling-in-my-body-elvis.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/out-of-time-the-weekend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/out-of-time-the-weekend.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/something-in-the-way-nirvana.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/something-in-the-way-nirvana.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/why-you-wanna-trip-on-me-michael-jackson.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/why-you-wanna-trip-on-me-michael-jackson.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/Server/data/you-put-a-spell-on-me-austin-giorgio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/data/you-put-a-spell-on-me-austin-giorgio.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/a-man-without-love-ngelbert-Hmperdinck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/a-man-without-love-ngelbert-Hmperdinck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/all-of-me-john-legend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/all-of-me-john-legend.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/birds-imagine-dragons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/birds-imagine-dragons.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/blinding-lights-the-weekend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/blinding-lights-the-weekend.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/dont-matter-to-me-drake.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/dont-matter-to-me-drake.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/feeling-in-my-body-elvis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/feeling-in-my-body-elvis.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/out-of-time-the-weekend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/out-of-time-the-weekend.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/something-in-the-way-nirvana.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/something-in-the-way-nirvana.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/why-you-wanna-trip-on-me-michael-jackson.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/why-you-wanna-trip-on-me-michael-jackson.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/data/you-put-a-spell-on-me-austin-giorgio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Server/data/you-put-a-spell-on-me-austin-giorgio.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seventh_assignment/src/main/java/Client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/seventh_assignment/src/main/java/Client/ClientHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +49,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SBU Projects/Term 2/AP/AP-Seventh-Assignment-Socket-Programming/seventh_assignment&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/SBU Projects/Term 2/AP/AP-Seventh-Assignment-Socket-Programming/seventh_assignment"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

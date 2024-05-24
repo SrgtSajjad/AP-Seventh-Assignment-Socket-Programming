@@ -2,11 +2,13 @@ package Client;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class ClientHandler implements Runnable {
     public static ArrayList<ClientHandler> clientHandlers = new ArrayList<>();
     public static ArrayList<String> chatHistory = new ArrayList<>();
+    public static File[] filesList;
     private Socket socket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
@@ -61,7 +63,56 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    private void downloadFiles() {
+    private void downloadFiles() throws IOException {
+        String request;
+        BufferedInputStream bis = null;
+        try {
+            bufferedWriter.write("-Download Menu-");
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+            while (true) {
+                String folderPath = "src/main/java/Server/data";
+                File folder = new File(folderPath);
+                filesList = folder.listFiles();
+                assert filesList != null;
+                int i = 0;
+                for (File file : filesList) {
+                    i++;
+                    bufferedWriter.write(i + ". " + file.getName());
+                    bufferedWriter.newLine();
+                }
+                bufferedWriter.write("~Exit");
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+
+                request = bufferedReader.readLine();
+                if (request.equalsIgnoreCase("exit"))
+                    break;
+
+                File myFile = filesList[Integer.parseInt(request) - 1];
+                byte[] myByteArray = new byte[(int) myFile.length()];
+
+                FileInputStream fis = new FileInputStream(myFile);
+                bis = new BufferedInputStream(fis);
+                bis.read(myByteArray, 0, myByteArray.length);
+
+                FileWriter downloadedFile = new FileWriter("D:\\SBU Projects\\Term 2\\AP\\AP-Seventh-Assignment-Socket-Programming\\seventh_assignment\\downloads\\" + myFile.getName(), true);
+                PrintWriter printWriter = new PrintWriter(downloadedFile, false);
+                printWriter.write(new String(myByteArray, StandardCharsets.UTF_8));
+
+                bufferedWriter.write("\n[SERVER] Download Completed.\n");
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+
+                downloadedFile.close();
+            }
+        } catch (IOException e) {
+            closeEverything(socket, bufferedReader, bufferedWriter);
+        } finally {
+            assert bis != null;
+            bis.close();
+        }
+
     }
 
 
