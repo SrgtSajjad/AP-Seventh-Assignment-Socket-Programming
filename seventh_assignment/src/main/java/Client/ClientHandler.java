@@ -46,10 +46,6 @@ public class ClientHandler implements Runnable {
                     case "download":
                         downloadFiles();
                         break;
-                    case "exit":
-                        closeEverything(socket, bufferedReader, bufferedWriter);
-                        // ToDo debug
-                        break;
                     default:
                         bufferedWriter.write("[SERVER] Invalid input: please choose from the menu");
                         bufferedWriter.newLine();
